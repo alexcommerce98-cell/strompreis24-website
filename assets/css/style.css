@@ -1486,3 +1486,128 @@ textarea {
 .funnel-progress-top[hidden] {
   display: none !important;
 }
+.funnel-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.funnel-option {
+  width: 100%;
+  min-height: 86px;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  text-align: left;
+  cursor: pointer;
+}
+
+.funnel-option strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.funnel-option span {
+  display: block;
+  color: #d7e3f1;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.funnel-option.is-selected {
+  border-color: #f7a51f;
+  box-shadow: 0 0 0 3px rgba(247, 165, 31, 0.18);
+  background: rgba(247, 165, 31, 0.12);
+}
+
+.funnel-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.funnel-field {
+  display: grid;
+  gap: 8px;
+}
+
+.funnel-field.full {
+  grid-column: 1 / -1;
+}
+
+.funnel-field label {
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.funnel-field input,
+.funnel-field select,
+.funnel-field textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #0f263f;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 15px 16px;
+  font: inherit;
+  outline: none;
+}
+
+.funnel-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.funnel-field input:focus,
+.funnel-field select:focus,
+.funnel-field textarea:focus {
+  border-color: #f7a51f;
+  box-shadow: 0 0 0 3px rgba(247, 165, 31, 0.14);
+}
+
+.funnel-error {
+  display: none;
+  margin-top: 18px;
+  border: 1px solid rgba(255, 88, 88, 0.45);
+  background: rgba(255, 88, 88, 0.1);
+  color: #ffd7d7;
+  border-radius: 14px;
+  padding: 13px 15px;
+}
+
+.funnel-error.is-visible {
+  display: block;
+}
+
+.funnel-check {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-top: 20px;
+  color: #d7e3f1;
+  line-height: 1.5;
+}
+
+.funnel-check input {
+  margin-top: 4px;
+}
+
+.funnel-success {
+  border: 1px solid rgba(80, 220, 140, 0.45);
+  background: rgba(80, 220, 140, 0.1);
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 22px;
+}
+
+@media (max-width: 900px) {
+  .funnel-options,
+  .funnel-fields {
+    grid-template-columns: 1fr;
+  }
+}

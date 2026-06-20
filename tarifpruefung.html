@@ -117,19 +117,21 @@
             </div>
           </div>
 
-          <div class="funnel-content" id="funnelContent">
-            <h1>Energievertrag prüfen lassen</h1>
-            <p>
-              Beantworten Sie wenige Fragen zu Ihrem Strom- oder Gasvertrag.
-  Danach melden wir uns persönlich mit einer passenden Einschätzung.
-            </p>
+          <form class="funnel-content" id="funnelForm" novalidate>
+  <div id="funnelContent">
+    <h1>Energievertrag prüfen lassen</h1>
+    <p>
+      Beantworten Sie wenige Fragen zu Ihrem Strom- oder Gasvertrag.
+      Danach melden wir uns persönlich mit einer passenden Einschätzung.
+    </p>
 
-            <div class="funnel-options">
-              <button type="button" class="button button-primary button-large funnel-start-button" data-next="energy" data-value="start">
-                Kostenlose Prüfung starten
-              </button>
-            </div>
-          </div>
+    <div class="funnel-options">
+      <button type="button" class="button button-primary button-large funnel-start-button" id="funnelStart">
+        Kostenlose Prüfung starten
+      </button>
+    </div>
+  </div>
+</form>
 
           <div class="funnel-nav" hidden>
             <button type="button" class="button button-secondary" id="funnelBack" disabled>Zurück</button>
@@ -137,10 +139,10 @@
           </div>
         </div>
 
-        <aside class="funnel-summary funnel-benefits">
+        <aside class="funnel-summary funnel-benefits" id="funnelSummaryBox">
           <h2>Ihre Vorteile</h2>
 
-          <div class="summary-list">
+          <div class="summary-list" id="funnelSummaryList">
             <div class="summary-item">
               <strong>✓ Kostenlos</strong>
               <span>Die Anfrage ist unverbindlich.</span>
