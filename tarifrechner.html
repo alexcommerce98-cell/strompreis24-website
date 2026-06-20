@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strompreis24 | Tarifrechner</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="tarifrechner">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Strompreis24 Startseite">
+        <img src="assets/img/logo-strompreis24-icon.png" alt="Strompreis24 Icon" class="brand-logo-icon">
+        <span class="brand-wordmark">
+          <span class="brand-wordmark-main">STROMPREIS</span><span class="brand-wordmark-accent">24</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Navigation öffnen" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="branchen.html">Branchen</a></li>
+          <li><a href="tarifpruefung.html">Tarifprüfung</a></li>
+          <li><a href="vertriebspartner.html">Partner</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-light fade-in">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Tarifrechner</span>
+          <h1>Tarifrechner für Strom und Gas</h1>
+          <p>Ermitteln Sie passgenaue Angebote innerhalb weniger Minuten – ganz ohne Kosten oder Verpflichtungen.</p>
+          <div class="hero-actions">
+            <a href="#tarif-form" class="button button-primary">Jetzt berechnen</a>
+            <a href="kontakt.html" class="button button-secondary">Beratung erhalten</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="plan-toggle" role="tablist">
+            <button type="button" class="active" data-value="strom">Strom</button>
+            <button type="button" data-value="gas">Gas</button>
+            <button type="button" data-value="strom-gas">Strom & Gas</button>
+          </div>
+          <div class="highlight-card">
+            <strong>3 Schritte zum Tarif</strong>
+            <p>Wählen Sie Produkt, geben Sie die Verbrauchsdaten ein und lassen Sie uns den passenden Tarif finden.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark fade-in" id="tarif-form">
+      <div class="container">
+        <div class="section-intro">
+          <span class="eyebrow">Berechnung</span>
+          <h2>Ihre Tarifdetails eingeben</h2>
+          <p>Nutzen Sie unseren Rechner, um schnell einen passenden Tarif zu finden oder zur persönlichen Beratung weitergeleitet zu werden.</p>
+        </div>
+        <div class="form-grid">
+          <div>
+            <div class="form-card">
+              <h2>Tarifberechnung</h2>
+              <form>
+                <input type="hidden" id="tarif-type" name="tarifType" value="strom">
+                <div class="form-row form-field">
+                  <label for="plz">Postleitzahl</label>
+                  <input type="text" id="plz" name="plz" placeholder="z. B. 10115" required>
+                </div>
+                <div class="form-row form-field">
+                  <label for="verbrauch">Jahresverbrauch (kWh)</label>
+                  <input type="number" id="verbrauch" name="verbrauch" placeholder="z. B. 3500" required>
+                </div>
+                <div class="form-row form-field">
+                  <label for="haushalt">Haushaltsgröße</label>
+                  <select id="haushalt" name="haushalt" required>
+                    <option value="">Bitte wählen</option>
+                    <option value="1-2">1-2 Personen</option>
+                    <option value="3-4">3-4 Personen</option>
+                    <option value="5+">5+ Personen</option>
+                  </select>
+                </div>
+                <div class="form-row form-field">
+                  <label for="anbieter">Aktueller Anbieter</label>
+                  <input type="text" id="anbieter" name="anbieter" placeholder="Ihr derzeitiger Anbieter">
+                </div>
+                <div class="form-row form-field">
+                  <label for="vertragsende">Vertragsende</label>
+                  <input type="text" id="vertragsende" name="vertragsende" placeholder="Monat/Jahr">
+                </div>
+                <h3>Kontakt</h3>
+                <div class="form-row form-field">
+                  <label for="vorname">Vorname</label>
+                  <input type="text" id="vorname" name="vorname" required>
+                </div>
+                <div class="form-row form-field">
+                  <label for="nachname">Nachname</label>
+                  <input type="text" id="nachname" name="nachname" required>
+                </div>
+                <div class="form-row form-field">
+                  <label for="telefon">Telefon</label>
+                  <input type="tel" id="telefon" name="telefon" required>
+                </div>
+                <div class="form-row form-field">
+                  <label for="email">E-Mail</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+                <div class="checkbox-field">
+                  <label><input type="checkbox" required>Ich akzeptiere die Datenschutzerklärung.</label>
+                </div>
+                <button type="submit" class="button button-primary">Tarif anfragen</button>
+                <div class="form-success" style="display:none;"></div>
+              </form>
+            </div>
+          </div>
+          <div>
+            <div class="highlight-card">
+              <h3>Ihr schneller Weg zum besten Tarif</h3>
+              <p>Unsere Empfehlung basiert auf Ihren Daten und sorgt für eine transparente Darstellung der besten Angebote.</p>
+            </div>
+            <div class="highlight-card">
+              <h3>Genauere Angebote</h3>
+              <p>Je mehr Details Sie angeben, desto genauer können wir Ihren Tarifvorteil berechnen.</p>
+            </div>
+            <div class="highlight-card">
+              <h3>Direkte Beratung</h3>
+              <p>Sie erhalten fundierte Unterstützung von erfahrenen Energieexperten.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer section-dark">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">
+        <span class="footer-logo-main">STROMPREIS</span><span class="footer-logo-accent">24</span>
+      </a>
+
+      <p>Energiemakler und unabhängiger Vermittler für Strom- und Gasverträge im B2B-Segment.</p>
+
+      <p class="disclaimer">
+        <strong>Wichtig:</strong> Strompreis24 ist als Energiemakler tätig und vermittelt Energieangebote für Geschäftskunden. Strompreis24 ist kein Energieversorger und kein Netzbetreiber.
+      </p>
+
+      <div class="footer-socials" aria-label="Social Media Links">
+        <a href="#" aria-label="LinkedIn" class="social-link">in</a>
+        <a href="#" aria-label="Instagram" class="social-link">ig</a>
+        <a href="#" aria-label="Facebook" class="social-link">f</a>
+        <a href="#" aria-label="YouTube" class="social-link">yt</a>
+      </div>
+    </div>
+
+    <div>
+      <h3>Leistungen</h3>
+      <ul>
+        <li><a href="leistungen.html">Gewerbestrom-Beratung</a></li>
+        <li><a href="leistungen.html">Gewerbegas-Beratung</a></li>
+        <li><a href="tarifpruefung.html">Tarifprüfung</a></li>
+        <li><a href="leistungen.html">Anbieterwechsel</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Unternehmen</h3>
+      <ul>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="vertriebspartner.html">Partner</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Rechtliches</h3>
+      <ul>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2026 Strompreis24. Alle Rechte vorbehalten.</p>
+
+    <div class="footer-legal-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
